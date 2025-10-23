@@ -39,3 +39,15 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+
+# Ignore vscode AI rules
+.github/instructions/codacy.instructions.md
+
+# Ignore setup files (optional - remove if you want to commit them)
+# GITHUB_SETUP.md
+# push-to-github.bat
+
+
+#Ignore vscode AI rules
+.github\instructions\codacy.instructions.md
