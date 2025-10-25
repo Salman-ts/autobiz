@@ -2,6 +2,39 @@ import { useState, useEffect } from 'react';
 import { Client, ClientFormData } from '../types/client';
 import { projectId, publicAnonKey } from '../utils/supabase/info';
 
+const DEMO_CLIENTS: Client[] = [
+  {
+    id: '1',
+    name: 'Ahmed Khan',
+    company: 'ABC Traders',
+    email: 'ahmed@abctraders.pk',
+    phone: '+92 300 1234567',
+    address: 'Karachi, Pakistan',
+    status: 'active',
+    createdAt: new Date().toISOString(),
+  },
+  {
+    id: '2',
+    name: 'Fatima Ali',
+    company: 'XYZ Company',
+    email: 'fatima@xyzcompany.pk',
+    phone: '+92 321 7654321',
+    address: 'Lahore, Pakistan',
+    status: 'active',
+    createdAt: new Date().toISOString(),
+  },
+  {
+    id: '3',
+    name: 'Hassan Raza',
+    company: 'Best Distributors',
+    email: 'hassan@bestdist.pk',
+    phone: '+92 333 9876543',
+    address: 'Islamabad, Pakistan',
+    status: 'active',
+    createdAt: new Date().toISOString(),
+  },
+];
+
 export function useClients() {
   const [clients, setClients] = useState<Client[]>([]);
   const [loading, setLoading] = useState(true);
@@ -16,9 +49,12 @@ export function useClients() {
       if (response.ok) {
         const data = await response.json();
         setClients(data);
+      } else {
+        setClients(DEMO_CLIENTS);
       }
     } catch (error) {
-      console.error('Error fetching clients:', error);
+      console.error('Error fetching clients, using demo data:', error);
+      setClients(DEMO_CLIENTS);
     } finally {
       setLoading(false);
     }

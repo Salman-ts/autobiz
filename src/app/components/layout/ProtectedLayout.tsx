@@ -6,6 +6,7 @@ import { useAuth } from '../../context/AuthContext';
 import { Sidebar } from './Sidebar';
 import { Navbar } from './Navbar';
 import { AIAssistant } from '../assistant/AIAssistant';
+import { BackendStatus } from '../BackendStatus';
 import { motion } from 'motion/react';
 
 interface ProtectedLayoutProps {
@@ -81,6 +82,7 @@ export function ProtectedLayout({ children }: ProtectedLayoutProps) {
         </main>
       </div>
       <AIAssistant />
+      <BackendStatus />
     </div>
   );
 }

@@ -53,9 +53,20 @@ export default function WhatsAppPage() {
           unreadCount: 0,
         }));
         setContacts(contactList);
+      } else {
+        setContacts([
+          { id: '1', name: 'Ahmed Khan', phone: '+92 300 1234567', lastMessage: 'Thanks for the order!', unreadCount: 0 },
+          { id: '2', name: 'Fatima Ali', phone: '+92 321 7654321', lastMessage: 'When will delivery arrive?', unreadCount: 1 },
+          { id: '3', name: 'Hassan Raza', phone: '+92 333 9876543', lastMessage: 'Payment sent', unreadCount: 0 },
+        ]);
       }
     } catch (error) {
-      console.error('Error fetching contacts:', error);
+      console.error('Error fetching contacts, using demo data:', error);
+      setContacts([
+        { id: '1', name: 'Ahmed Khan', phone: '+92 300 1234567', lastMessage: 'Thanks for the order!', unreadCount: 0 },
+        { id: '2', name: 'Fatima Ali', phone: '+92 321 7654321', lastMessage: 'When will delivery arrive?', unreadCount: 1 },
+        { id: '3', name: 'Hassan Raza', phone: '+92 333 9876543', lastMessage: 'Payment sent', unreadCount: 0 },
+      ]);
     }
   };
 

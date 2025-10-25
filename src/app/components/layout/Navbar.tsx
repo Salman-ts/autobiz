@@ -16,6 +16,7 @@ import {
 } from '../ui/dropdown-menu';
 import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar';
 import { Badge } from '../ui/badge';
+import { toast } from 'sonner';
 
 interface NavbarProps {
   onMenuClick: () => void;
@@ -23,6 +24,7 @@ interface NavbarProps {
 
 export function Navbar({ onMenuClick }: NavbarProps) {
   const [isDark, setIsDark] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
   const router = useRouter();
   const { signOut, profile } = useAuth();
 
@@ -46,6 +48,14 @@ export function Navbar({ onMenuClick }: NavbarProps) {
     }
   };
 
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      toast.info(`Searching for: ${searchQuery}`);
+      // Search functionality will be connected to backend
+    }
+  };
+
   return (
     <header className="sticky top-0 z-30 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="flex h-16 items-center gap-4 px-4 lg:px-6">
@@ -60,13 +70,15 @@ export function Navbar({ onMenuClick }: NavbarProps) {
         </Button>
 
         <div className="flex-1">
-          <div className="relative max-w-md">
+          <form onSubmit={handleSearch} className="relative max-w-md">
             <Search className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-muted-foreground" />
             <Input
               placeholder="Search clients, invoices, products..."
               className="pl-10 w-full h-10"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
             />
-          </div>
+          </form>
         </div>
 
         {/* Notifications */}
