@@ -119,7 +119,6 @@ export function Navbar({ onMenuClick }: NavbarProps) {
           <DropdownMenuTrigger asChild>
             <Button variant="ghost" className="relative h-10 w-10 rounded-full p-0">
               <Avatar className="h-10 w-10">
-                <AvatarImage src={profile?.avatar} />
                 <AvatarFallback className="bg-gradient-to-br from-blue-500 to-purple-500 text-white">
                   {profile?.name?.charAt(0) || 'U'}
                 </AvatarFallback>

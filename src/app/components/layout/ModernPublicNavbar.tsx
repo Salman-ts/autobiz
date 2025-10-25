@@ -1,10 +1,10 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from 'motion/react';
-import { Menu, X, ChevronDown, ArrowRight, Sparkles } from 'lucide-react';
+import { Menu, X, ArrowRight, Sparkles } from 'lucide-react';
 import { Button } from '../ui/button';
 import { Logo } from '../Logo';
 

@@ -10,7 +10,6 @@ import { PaymentStatusChart } from '../components/dashboard/PaymentStatusChart';
 
 
 export default function DashboardPage() {
-  const router = useRouter();
   const [metrics, setMetrics] = useState({
     totalRevenue: 0,
     pendingPayments: 0,
