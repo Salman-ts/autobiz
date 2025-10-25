@@ -5,6 +5,7 @@ import { motion } from 'motion/react';
 import { Card } from '../components/ui/card';
 import { Badge } from '../components/ui/badge';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
+import { IMAGES } from '../utils/images';
 import { 
   Users, 
   FileText, 
@@ -33,7 +34,7 @@ export default function FeaturesPage() {
       color: 'from-blue-600 to-cyan-600',
       tagline: 'Build lasting customer relationships',
       description: 'Complete customer relationship management system designed for Pakistani traders. Track every interaction, manage contacts, and never miss a follow-up.',
-      image: 'https://images.unsplash.com/photo-1753161618091-b4cf35b9aa99?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzbWFsbCUyMGJ1c2luZXNzJTIwc3VjY2Vzc3xlbnwxfHx8fDE3NjA5Njc5ODF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      image: IMAGES.crm.team,
       items: [
         'Complete client database with contact details',
         'Purchase history and transaction tracking',
@@ -49,7 +50,7 @@ export default function FeaturesPage() {
       color: 'from-purple-600 to-pink-600',
       tagline: 'Professional invoices in seconds',
       description: 'Create, send, and track invoices with ease. Automated calculations, payment reminders, and beautiful templates that make your business look professional.',
-      image: 'https://images.unsplash.com/photo-1729184648234-7650c1484905?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGF1dG9tYXRpb24lMjBkYXNoYm9hcmR8ZW58MXx8fHwxNzYwODg2MzI3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      image: IMAGES.invoice.documents,
       items: [
         'Professional invoice generation with templates',
         'Automated tax and discount calculations',
@@ -65,7 +66,7 @@ export default function FeaturesPage() {
       color: 'from-green-600 to-emerald-600',
       tagline: 'Never run out of stock again',
       description: 'Real-time inventory tracking with smart alerts. Know exactly what you have, what you need, and when to reorder.',
-      image: 'https://images.unsplash.com/photo-1740914994657-f1cdffdc418e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3YXJlaG91c2UlMjBpbnZlbnRvcnklMjBtYW5hZ2VtZW50fGVufDF8fHx8MTc2MDk1MDk1MXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      image: IMAGES.inventory.warehouse,
       items: [
         'Real-time stock level tracking',
         'Low stock alerts and notifications',
@@ -81,7 +82,7 @@ export default function FeaturesPage() {
       color: 'from-orange-600 to-red-600',
       tagline: 'Automate customer communication',
       description: 'Connect with customers where they are. Send automated messages, confirmations, and reminders through WhatsApp.',
-      image: 'https://images.unsplash.com/flagged/photo-1581390476351-b5d89504a5cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBwaG9uZSUyMGJ1c2luZXNzJTIwYXBwfGVufDF8fHx8MTc2MDk2Nzk4MHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      image: IMAGES.whatsapp.chat,
       items: [
         'Automated order confirmation messages',
         'Payment reminder scheduling',
@@ -97,7 +98,7 @@ export default function FeaturesPage() {
       color: 'from-indigo-600 to-blue-600',
       tagline: 'Make data-driven decisions',
       description: 'Powerful insights at your fingertips. Track revenue, analyze trends, and understand your business performance with beautiful visualizations.',
-      image: 'https://images.unsplash.com/photo-1642522029691-029b5a432954?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMG1lZXRpbmclMjBwcm9mZXNzaW9uYWx8ZW58MXx8fHwxNzYwODgzNzIyfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      image: IMAGES.analytics.charts,
       items: [
         'Real-time revenue and sales tracking',
         'Customer behavior insights and patterns',
@@ -113,7 +114,7 @@ export default function FeaturesPage() {
       color: 'from-yellow-600 to-orange-600',
       tagline: '24/7 intelligent business support',
       description: 'Your personal AI business assistant. Get instant answers to queries, automated suggestions, and smart insights in both Urdu and English.',
-      image: 'https://images.unsplash.com/photo-1556740758-90de374c12ad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjdXN0b21lciUyMHNlcnZpY2UlMjByZXByZXNlbnRhdGl2ZXxlbnwxfHx8fDE3NjA5NDI2MTB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      image: IMAGES.ai.tech,
       items: [
         '24/7 availability for business queries',
         'Automated response suggestions',
@@ -148,9 +149,9 @@ export default function FeaturesPage() {
           className="text-center mb-20"
         >
           <Badge className="mb-6">Complete Feature Set</Badge>
-          <h1 className="text-5xl lg:text-7xl font-bold mb-6">
+          <h1 className="text-5xl lg:text-7xl font-bold mb-6 leading-tight">
             Powerful Features for
-            <span className="block mt-2 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            <span className="block mt-2 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent pb-2">
               Modern Businesses
             </span>
           </h1>

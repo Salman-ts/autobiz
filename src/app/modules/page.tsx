@@ -18,6 +18,7 @@ import {
   CheckCircle2
 } from 'lucide-react';
 import { useRouter } from 'next/navigation';
+import { IMAGES } from '../utils/images';
 
 export default function ModulesPage() {
   const router = useRouter();
@@ -38,7 +39,7 @@ export default function ModulesPage() {
         'Credit Management',
         'Client Categorization'
       ],
-      image: 'https://images.unsplash.com/photo-1753161618091-b4cf35b9aa99?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzbWFsbCUyMGJ1c2luZXNzJTIwc3VjY2Vzc3xlbnwxfHx8fDE3NjA5Njc5ODF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+      image: IMAGES.crm.main
     },
     {
       icon: FileText,
@@ -55,7 +56,7 @@ export default function ModulesPage() {
         'PDF Export & Email',
         'Invoice Templates'
       ],
-      image: 'https://images.unsplash.com/photo-1729184648234-7650c1484905?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGF1dG9tYXRpb24lMjBkYXNoYm9hcmR8ZW58MXx8fHwxNzYwODg2MzI3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+      image: IMAGES.invoice.main
     },
     {
       icon: Package,
@@ -72,7 +73,7 @@ export default function ModulesPage() {
         'Supplier Tracking',
         'Stock History Reports'
       ],
-      image: 'https://images.unsplash.com/photo-1740914994657-f1cdffdc418e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3YXJlaG91c2UlMjBpbnZlbnRvcnklMjBtYW5hZ2VtZW50fGVufDF8fHx8MTc2MDk1MDk1MXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+      image: IMAGES.inventory.main
     },
     {
       icon: MessageSquare,
@@ -89,7 +90,7 @@ export default function ModulesPage() {
         'Template Library',
         'Chat Analytics'
       ],
-      image: 'https://images.unsplash.com/flagged/photo-1581390476351-b5d89504a5cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBwaG9uZSUyMGJ1c2luZXNzJTIwYXBwfGVufDF8fHx8MTc2MDk2Nzk4MHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+      image: IMAGES.whatsapp.main
     },
     {
       icon: BarChart3,
@@ -106,7 +107,7 @@ export default function ModulesPage() {
         'Visual Charts & Graphs',
         'Custom Reports'
       ],
-      image: 'https://images.unsplash.com/photo-1642522029691-029b5a432954?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMG1lZXRpbmclMjBwcm9mZXNzaW9uYWx8ZW58MXx8fHwxNzYwODgzNzIyfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+      image: IMAGES.analytics.main
     },
     {
       icon: Zap,
@@ -123,7 +124,7 @@ export default function ModulesPage() {
         'Business Insights',
         'Learning Capability'
       ],
-      image: 'https://images.unsplash.com/photo-1556740758-90de374c12ad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjdXN0b21lciUyMHNlcnZpY2UlMjByZXByZXNlbnRhdGl2ZXxlbnwxfHx8fDE3NjA5NDI2MTB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+      image: IMAGES.ai.main
     },
     {
       icon: Settings,
@@ -140,7 +141,7 @@ export default function ModulesPage() {
         'Theme Customization',
         'Security Settings'
       ],
-      image: 'https://images.unsplash.com/photo-1630283017802-785b7aff9aac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjB3b3Jrc3BhY2V8ZW58MXx8fHwxNzYwOTUwNzQwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+      image: IMAGES.settings.main
     }
   ];
 
@@ -154,9 +155,9 @@ export default function ModulesPage() {
           className="text-center mb-20"
         >
           <Badge className="mb-6">7 Powerful Modules</Badge>
-          <h1 className="text-5xl lg:text-7xl font-bold mb-6">
+          <h1 className="text-5xl lg:text-7xl font-bold mb-6 leading-tight">
             Complete Business
-            <span className="block mt-2 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+            <span className="block mt-2 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent pb-2">
               Management Suite
             </span>
           </h1>
@@ -254,6 +255,92 @@ export default function ModulesPage() {
             </motion.div>
           ))}
         </div>
+
+        {/* Industry Examples */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-32"
+        >
+          <div className="text-center mb-12">
+            <Badge className="mb-4">Industry Solutions</Badge>
+            <h2 className="text-4xl font-bold mb-4">
+              Perfect for Every Business Type
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              See how different industries use AutoBiz modules
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="p-8 hover:shadow-xl transition-shadow">
+              <div className="text-4xl mb-4">🏢</div>
+              <h3 className="text-xl font-bold mb-3">Distributors & Traders</h3>
+              <p className="text-muted-foreground mb-4">
+                Manage bulk orders, track inventory across warehouses, automate invoicing
+              </p>
+              <ul className="space-y-2 text-sm">
+                <li className="flex items-center gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-green-600" />
+                  <span>Bulk order management</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-green-600" />
+                  <span>Multi-warehouse inventory</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-green-600" />
+                  <span>Credit management</span>
+                </li>
+              </ul>
+            </Card>
+
+            <Card className="p-8 hover:shadow-xl transition-shadow">
+              <div className="text-4xl mb-4">🏨</div>
+              <h3 className="text-xl font-bold mb-3">Hotels & Restaurants</h3>
+              <p className="text-muted-foreground mb-4">
+                Track supplies, manage vendors, automate ordering and billing
+              </p>
+              <ul className="space-y-2 text-sm">
+                <li className="flex items-center gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-green-600" />
+                  <span>Supplier management</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-green-600" />
+                  <span>Perishable item tracking</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-green-600" />
+                  <span>Daily consumption reports</span>
+                </li>
+              </ul>
+            </Card>
+
+            <Card className="p-8 hover:shadow-xl transition-shadow">
+              <div className="text-4xl mb-4">🛒</div>
+              <h3 className="text-xl font-bold mb-3">Retail Chains</h3>
+              <p className="text-muted-foreground mb-4">
+                Multi-location inventory, customer loyalty, sales analytics
+              </p>
+              <ul className="space-y-2 text-sm">
+                <li className="flex items-center gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-green-600" />
+                  <span>Multi-store management</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-green-600" />
+                  <span>Customer loyalty programs</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle2 className="h-4 w-4 text-green-600" />
+                  <span>Sales performance tracking</span>
+                </li>
+              </ul>
+            </Card>
+          </div>
+        </motion.div>
 
         {/* CTA Section */}
         <motion.div

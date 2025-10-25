@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { PublicNavbar } from './PublicNavbar';
+import { ModernPublicNavbar } from './ModernPublicNavbar';
 import { Footer } from './Footer';
 
 interface PublicLayoutProps {
@@ -11,7 +11,7 @@ interface PublicLayoutProps {
 export function PublicLayout({ children }: PublicLayoutProps) {
   return (
     <div className="min-h-screen flex flex-col">
-      <PublicNavbar />
+      <ModernPublicNavbar />
       <main className="flex-1 pt-16">
         {children}
       </main>

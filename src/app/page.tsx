@@ -25,6 +25,9 @@ import {
 } from 'lucide-react';
 import { ImageWithFallback } from './components/figma/ImageWithFallback';
 import { PublicLayout } from './components/layout/PublicLayout';
+import { WhatsAppDemo } from './components/WhatsAppDemo';
+import { TrustBadges, PaymentMethods } from './components/TrustBadges';
+import { IMAGES } from './utils/images';
 
 export default function HomePage() {
   const router = useRouter();
@@ -67,7 +70,7 @@ export default function HomePage() {
       name: 'Ahmed Malik',
       role: 'Trading Company Owner',
       company: 'Karachi',
-      image: 'https://images.unsplash.com/photo-1709109769928-74940d9ecbe5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoYXBweSUyMGJ1c2luZXNzJTIwb3duZXIlMjBwYWtpc3RhbnxlbnwxfHx8fDE3NjA5Njc5Nzl8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      image: IMAGES.people.man1,
       quote: 'AutoBiz transformed how we manage inventory. We saved 15 hours per week and reduced errors by 80%.',
       rating: 5
     },
@@ -75,7 +78,7 @@ export default function HomePage() {
       name: 'Fatima Khan',
       role: 'Distribution Manager',
       company: 'Lahore',
-      image: 'https://images.unsplash.com/photo-1556740758-90de374c12ad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjdXN0b21lciUyMHNlcnZpY2UlMjByZXByZXNlbnRhdGl2ZXxlbnwxfHx8fDE3NjA5NDI2MTB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      image: IMAGES.people.woman1,
       quote: 'The WhatsApp automation feature alone paid for itself. Our customer response time improved dramatically.',
       rating: 5
     },
@@ -83,7 +86,7 @@ export default function HomePage() {
       name: 'Bilal Hussain',
       role: 'Wholesale Business',
       company: 'Islamabad',
-      image: 'https://images.unsplash.com/photo-1642522029691-029b5a432954?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMG1lZXRpbmclMjBwcm9mZXNzaW9uYWx8ZW58MXx8fHwxNzYwODgzNzIyfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      image: IMAGES.people.man2,
       quote: 'Finally, a business system built for Pakistani traders. The Urdu support makes it easy for our entire team.',
       rating: 5
     }
@@ -115,7 +118,7 @@ export default function HomePage() {
               
               <h1 className="text-5xl lg:text-7xl font-bold mb-6 leading-tight">
                 Run Your Business
-                <span className="block mt-2 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+                <span className="block mt-2 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent pb-2">
                   On Autopilot
                 </span>
               </h1>
@@ -161,8 +164,8 @@ export default function HomePage() {
                 {/* Main Image */}
                 <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                   <ImageWithFallback
-                    src="https://images.unsplash.com/photo-1729184648234-7650c1484905?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGF1dG9tYXRpb24lMjBkYXNoYm9hcmR8ZW58MXx8fHwxNzYwODg2MzI3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                    alt="AutoBiz Dashboard"
+                    src={IMAGES.hero.dashboard}
+                    alt="AutoBiz Dashboard - Business Automation Platform"
                     className="w-full h-auto"
                   />
                   <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/20 to-purple-600/20"></div>
@@ -208,6 +211,22 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Trust Badges Section */}
+      <section className="py-16 bg-white dark:bg-gray-950">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-8"
+          >
+            <h2 className="text-2xl font-bold mb-2">Trusted by Pakistani Businesses</h2>
+            <p className="text-muted-foreground">Secure, reliable, and built for you</p>
+          </motion.div>
+          <TrustBadges />
+        </div>
+      </section>
+
       {/* Stats Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -228,6 +247,85 @@ export default function HomePage() {
                 <div className="text-sm opacity-90">{stat.label}</div>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* WhatsApp Demo Section */}
+      <section className="py-24 bg-gray-50 dark:bg-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
+              <Badge className="mb-4">WhatsApp Automation</Badge>
+              <h2 className="text-4xl font-bold mb-4">
+                Automate Customer Communication
+              </h2>
+              <p className="text-lg text-muted-foreground mb-6">
+                Send order confirmations, payment reminders, and delivery updates automatically via WhatsApp. 
+                Support both English and Urdu messages.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-center gap-3">
+                  <CheckCircle2 className="h-5 w-5 text-green-600" />
+                  <span>Auto-reply to customer queries</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <CheckCircle2 className="h-5 w-5 text-green-600" />
+                  <span>Bulk message broadcasting</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <CheckCircle2 className="h-5 w-5 text-green-600" />
+                  <span>Order confirmation & tracking</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <CheckCircle2 className="h-5 w-5 text-green-600" />
+                  <span>Payment reminders</span>
+                </li>
+              </ul>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
+              <WhatsAppDemo />
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Trust Badges */}
+      <section className="py-16 bg-white dark:bg-gray-950 border-y">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-8"
+          >
+            <p className="text-sm text-muted-foreground mb-6">Trusted by leading businesses across Pakistan</p>
+          </motion.div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center opacity-60">
+            <div className="text-center">
+              <div className="text-2xl font-bold mb-1">🏢</div>
+              <p className="text-sm font-semibold">Trading Companies</p>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold mb-1">🏪</div>
+              <p className="text-sm font-semibold">Distributors</p>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold mb-1">🏨</div>
+              <p className="text-sm font-semibold">Hotels & Restaurants</p>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold mb-1">🛒</div>
+              <p className="text-sm font-semibold">Retail Chains</p>
+            </div>
           </div>
         </div>
       </section>
@@ -337,6 +435,13 @@ export default function HomePage() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Payment Methods */}
+      <section className="py-12 bg-gray-50 dark:bg-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <PaymentMethods />
         </div>
       </section>
 

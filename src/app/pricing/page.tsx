@@ -7,6 +7,7 @@ import { Button } from '../components/ui/button';
 import { Card } from '../components/ui/card';
 import { Badge } from '../components/ui/badge';
 import { CheckCircle2, Sparkles, X } from 'lucide-react';
+import { PaymentMethods } from '../components/TrustBadges';
 
 export default function PricingPage() {
   const router = useRouter();
@@ -133,9 +134,9 @@ export default function PricingPage() {
           className="text-center mb-16"
         >
           <Badge className="mb-6">Flexible Pricing</Badge>
-          <h1 className="text-5xl lg:text-7xl font-bold mb-6">
+          <h1 className="text-5xl lg:text-7xl font-bold mb-6 leading-tight">
             Simple, Transparent
-            <span className="block mt-2 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            <span className="block mt-2 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent pb-2">
               Pricing Plans
             </span>
           </h1>
@@ -279,6 +280,16 @@ export default function PricingPage() {
               </motion.div>
             ))}
           </div>
+        </motion.div>
+
+        {/* Payment Methods */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-16"
+        >
+          <PaymentMethods />
         </motion.div>
 
         {/* CTA */}

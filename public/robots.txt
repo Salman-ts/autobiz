@@ -1,0 +1,18 @@
+# robots.txt for AutoBiz
+
+User-agent: *
+Allow: /
+Disallow: /dashboard
+Disallow: /crm
+Disallow: /invoices
+Disallow: /inventory
+Disallow: /whatsapp
+Disallow: /analytics
+Disallow: /settings
+Disallow: /api/
+
+# Sitemap
+Sitemap: https://autobiz.vercel.app/sitemap.xml
+
+# Crawl-delay for better server performance
+Crawl-delay: 1

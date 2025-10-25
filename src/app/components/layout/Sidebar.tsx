@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'motion/react';
+import { Logo } from '../Logo';
 import {
   LayoutDashboard,
   Users,
@@ -71,12 +72,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
       >
         <div className="flex h-full flex-col">
           <div className="border-b px-6 py-5 flex items-center justify-between">
-            <div>
-              <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-emerald-500 bg-clip-text text-transparent">
-                AutoBiz
-              </h1>
-              <p className="text-sm text-muted-foreground mt-1">Business Automation</p>
-            </div>
+            <Logo size="default" />
             <button
               onClick={onClose}
               className="lg:hidden p-2 hover:bg-accent rounded-lg transition-colors"
