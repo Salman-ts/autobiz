@@ -52,7 +52,7 @@ export default function DashboardPage() {
   };
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-4 sm:space-y-6 w-full">
       {/* Personalized Greeting */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
@@ -111,7 +111,7 @@ export default function DashboardPage() {
         />
       </motion.div>
 
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-5">
+      <div className="grid gap-3 sm:gap-4 md:gap-6 grid-cols-2 lg:grid-cols-5">
         <KpiCard
           title="Total Revenue"
           value={`Rs ${metrics.totalRevenue.toLocaleString()}`}
@@ -152,7 +152,7 @@ export default function DashboardPage() {
         />
       </div>
 
-      <div className="grid gap-6 lg:grid-cols-2">
+      <div className="grid gap-4 sm:gap-6 lg:grid-cols-2">
         <RevenueChart />
         <PaymentStatusChart />
       </div>

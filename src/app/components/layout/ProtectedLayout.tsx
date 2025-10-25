@@ -67,9 +67,9 @@ export function ProtectedLayout({ children }: ProtectedLayoutProps) {
   return (
     <div className="flex min-h-screen bg-background">
       <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
-      <div className="flex-1 flex flex-col lg:ml-64 transition-all duration-300">
+      <div className="flex-1 flex flex-col lg:ml-64 transition-all duration-300 min-h-screen">
         <Navbar onMenuClick={() => setSidebarOpen(true)} />
-        <main className="flex-1 p-4 sm:p-6">
+        <main className="flex-1 p-3 sm:p-4 md:p-6 max-w-full overflow-x-hidden">
           <motion.div
             key={pathname}
             initial={{ opacity: 0, y: 10 }}

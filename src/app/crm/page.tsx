@@ -68,22 +68,22 @@ export default function CRMPage() {
   );
 
   return (
-    <div className="space-y-6">
-      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+    <div className="space-y-4 sm:space-y-6 w-full">
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4">
         <div>
-          <h1 className="text-3xl font-bold">CRM</h1>
+          <h1 className="text-2xl sm:text-3xl font-bold">CRM</h1>
           <p className="text-muted-foreground mt-1">
             Manage your clients and relationships
           </p>
         </div>
-        <Button onClick={handleAdd} className="w-full sm:w-auto">
+        <Button onClick={handleAdd} className="w-full sm:w-auto min-h-[44px]">
           <Plus className="h-4 w-4 mr-2" />
           Add Client
         </Button>
       </div>
 
-      <div className="flex items-center gap-4">
-        <div className="relative flex-1 max-w-md">
+      <div className="flex items-center gap-3 sm:gap-4">
+        <div className="relative flex-1 max-w-full sm:max-w-md">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
           <Input
             placeholder="Search clients by name, company, or phone..."

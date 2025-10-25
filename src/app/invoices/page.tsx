@@ -40,29 +40,29 @@ export default function InvoicesPage() {
   );
 
   return (
-    <div className="space-y-6">
-      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+    <div className="space-y-4 sm:space-y-6 w-full">
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4">
         <div>
-          <h1 className="text-3xl font-bold">Invoices</h1>
+          <h1 className="text-2xl sm:text-3xl font-bold">Invoices</h1>
           <p className="text-muted-foreground mt-1">
             Manage and track all your invoices
           </p>
         </div>
         <div className="flex flex-col sm:flex-row gap-2 w-full sm:w-auto">
-          <Button variant="outline" onClick={handleFileUpload} className="w-full sm:w-auto">
+          <Button variant="outline" onClick={handleFileUpload} className="w-full sm:w-auto min-h-[44px]">
             <Upload className="h-4 w-4 mr-2" />
             Upload PDF
           </Button>
-          <Button className="w-full sm:w-auto">
+          <Button className="w-full sm:w-auto min-h-[44px]">
             <Plus className="h-4 w-4 mr-2" />
             Create Invoice
           </Button>
         </div>
       </div>
 
-      <div className="rounded-xl border bg-card p-4 sm:p-6">
-        <div className="flex items-center gap-4 mb-4">
-          <div className="relative flex-1 max-w-md">
+      <div className="rounded-xl border bg-card p-3 sm:p-4 md:p-6">
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 mb-4">
+          <div className="relative flex-1 max-w-full sm:max-w-md">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
             <Input
               placeholder="Search invoices..."
@@ -71,7 +71,7 @@ export default function InvoicesPage() {
               className="pl-9"
             />
           </div>
-          <Button variant="outline">Filter</Button>
+          <Button variant="outline" className="w-full sm:w-auto min-h-[44px]">Filter</Button>
         </div>
 
         <div className="space-y-4">

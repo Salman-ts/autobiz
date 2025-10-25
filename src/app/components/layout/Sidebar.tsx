@@ -66,8 +66,9 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
         }}
         transition={{ type: 'spring', damping: 30, stiffness: 300 }}
         className={cn(
-          'fixed left-0 top-0 h-screen w-64 border-r bg-card z-50',
-          'lg:translate-x-0'
+          'fixed left-0 top-0 h-full w-64 border-r bg-card z-50',
+          'lg:translate-x-0',
+          'overflow-hidden'
         )}
       >
         <div className="flex h-full flex-col">
@@ -82,7 +83,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
             </button>
           </div>
 
-          <nav className="flex-1 overflow-y-auto px-3 py-4">
+          <nav className="flex-1 overflow-y-auto overflow-x-hidden px-3 py-4 scrollbar-hide">
             <div className="space-y-1">
               {menuItems.map((item) => {
                 const Icon = item.icon;
@@ -92,14 +93,15 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                   <Link key={item.path} href={item.path} onClick={handleLinkClick}>
                     <div
                       className={cn(
-                        'flex items-center gap-3 rounded-xl px-3 py-2.5 transition-all duration-200',
+                        'flex items-center gap-3 rounded-xl px-3 py-2.5 transition-all duration-200 touch-manipulation',
+                        'min-h-[44px]',
                         isActive
                           ? 'bg-primary text-primary-foreground shadow-sm'
-                          : 'text-muted-foreground hover:bg-accent hover:text-accent-foreground hover:translate-x-1'
+                          : 'text-muted-foreground hover:bg-accent hover:text-accent-foreground active:scale-95'
                       )}
                     >
                       <Icon className="h-5 w-5 flex-shrink-0" />
-                      <span className="truncate">{item.name}</span>
+                      <span className="truncate text-sm font-medium">{item.name}</span>
                     </div>
                   </Link>
                 );

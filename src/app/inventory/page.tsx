@@ -39,22 +39,22 @@ export default function InventoryPage() {
   );
 
   return (
-    <div className="space-y-6">
-      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+    <div className="space-y-4 sm:space-y-6 w-full">
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4">
         <div>
-          <h1 className="text-3xl font-bold">Inventory</h1>
+          <h1 className="text-2xl sm:text-3xl font-bold">Inventory</h1>
           <p className="text-muted-foreground mt-1">
             Track and manage your product inventory
           </p>
         </div>
-        <Button className="w-full sm:w-auto">
+        <Button className="w-full sm:w-auto min-h-[44px]">
           <Plus className="h-4 w-4 mr-2" />
           Add Product
         </Button>
       </div>
 
       {lowStockItems.length > 0 && (
-        <div className="rounded-xl border border-red-200 dark:border-red-800 bg-red-50 dark:bg-red-950/20 p-4">
+        <div className="rounded-xl border border-red-200 dark:border-red-800 bg-red-50 dark:bg-red-950/20 p-3 sm:p-4">
           <div className="flex items-center gap-3">
             <AlertTriangle className="h-5 w-5 text-red-600" />
             <div>
@@ -69,8 +69,8 @@ export default function InventoryPage() {
         </div>
       )}
 
-      <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-        <div className="relative flex-1 max-w-md">
+      <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+        <div className="relative flex-1 max-w-full sm:max-w-md">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
           <Input
             placeholder="Search products by name, SKU, or category..."
@@ -79,7 +79,7 @@ export default function InventoryPage() {
             className="pl-9"
           />
         </div>
-        <Button variant="outline" className="w-full sm:w-auto">Export</Button>
+        <Button variant="outline" className="w-full sm:w-auto min-h-[44px]">Export</Button>
       </div>
 
       <div>
